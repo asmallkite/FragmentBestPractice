@@ -4,9 +4,10 @@ package com.example.a10648.fragmentbestpractice;
  * Created by 10648 on 2016/6/14 0014.
  */
 public class News {
+    int titleid;
     private String title;
     private String content;
-    int titleid;
+
 
     public News() {
     }
@@ -19,10 +20,11 @@ public class News {
     public int getTitleid() {
         return titleid;
     }
-    public News(String title, String content, int titleid) {
+
+    public News(int titleid, String title, String content) {
+        this.titleid = titleid;
         this.title = title;
         this.content = content;
-        this.titleid = titleid;
     }
 
     public void setTitleid(int titleid) {

@@ -66,15 +66,27 @@ public class NewsTitleFragment extends Fragment implements AdapterView.OnItemCli
 
     private List<News> getNews(){
         List<News> newsList = new ArrayList<News>();
+//        News news1 = new News();
+//        news1.setTitle("This is first news title");
+//        news1.setContent("This is the first news Content.");
+//        newsList.add(news1);
+//        News news2 = new News("this is the second title", "I could not know whether this method " +
+//                "will work");
+//        newsList.add(news2);
+//        News news3 = new News("kite","I am a small kite");
+//        newsList.add(news3);
         News news1 = new News();
+        news1.setTitleid(1);
         news1.setTitle("This is first news title");
         news1.setContent("This is the first news Content.");
         newsList.add(news1);
-        News news2 = new News("this is the second title", "I could not know whether this method " +
+        News news2 = new News(2,"this is the second title", "I could not know whether this method " +
                 "will work");
         newsList.add(news2);
-        News news3 = new News("kite","I am a small kite");
+        News news3 = new News(3,"kite","I am a small kite");
         newsList.add(news3);
+        News news4 =new  News(4, "title4","This is the content of 4");
+        newsList.add(news4);
         return newsList;
     }
     public static void actionStart(Context context, String newsTitle, String newsContent){
