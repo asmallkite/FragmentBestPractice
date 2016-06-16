@@ -4,7 +4,7 @@ package com.example.a10648.fragmentbestpractice.model;
  * Created by 10648 on 2016/6/14 0014.
  */
 public class News {
-    int titleid;
+    int titleId;
     private String title;
     private String content;
 
@@ -17,19 +17,22 @@ public class News {
         this.content = content;
     }
 
-    public int getTitleid() {
-        return titleid;
-    }
+
 
     public News(int titleid, String title, String content) {
-        this.titleid = titleid;
+        this.titleId = titleid;
         this.title = title;
         this.content = content;
     }
 
-    public void setTitleid(int titleid) {
-        this.titleid = titleid;
+    public int getTitleId() {
+        return titleId;
     }
+
+    public void setTitleId(int titleId) {
+        this.titleId = titleId;
+    }
+
     public String getTitle() {
         return title;
     }

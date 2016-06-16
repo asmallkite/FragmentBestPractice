@@ -62,7 +62,7 @@ public class NewsTitleFragment extends Fragment implements AdapterView.OnItemCli
             NewsContentFragment newsContentFragment = (NewsContentFragment)getFragmentManager().findFragmentById(R.id.news_content_fragment);
             newsContentFragment.refresh(news.getTitle(), news.getContent());
         }else {
-            actionStart(getActivity(),news.getTitleid(), news.getTitle(), news.getContent());
+            actionStart(getActivity(),news.getTitleId(), news.getTitle(), news.getContent());
         }
     }
 
@@ -79,11 +79,11 @@ public class NewsTitleFragment extends Fragment implements AdapterView.OnItemCli
 //        News news3 = new News("kite","I am a small kite");
 //        newsList.add(news3);
         News news1 = new News();
-        news1.setTitleid(1);
-        news1.setTitle("This is first news title");
-        news1.setContent("This is the first news Content.");
+        news1.setTitleId(1);
+        news1.setTitle("title 1");
+        news1.setContent("one");
         newsList.add(news1);
-        News news2 = new News(2,"this is the second title", "I could not know whether this method " +
+        News news2 = new News(2,"title 2", "I2this method " +
                 "will work");
         newsList.add(news2);
         News news3 = new News(3,"kite","I am a small kite");

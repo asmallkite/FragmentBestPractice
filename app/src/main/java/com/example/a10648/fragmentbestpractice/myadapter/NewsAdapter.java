@@ -1,6 +1,7 @@
 package com.example.a10648.fragmentbestpractice.myadapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,7 @@ import com.example.a10648.fragmentbestpractice.model.News;
 import java.util.List;
 
 /**
- * Created by 10648 on 2016/6/16 0016.
+ * Created by 李争 on 2016/6/16 0016.
  */
 public class NewsAdapter extends ArrayAdapter<News>{
     private int resourceId;
@@ -33,9 +34,11 @@ public class NewsAdapter extends ArrayAdapter<News>{
             view = convertView;
         }
         TextView newsTitleId = (TextView)view.findViewById(R.id.news_title_id);
-        newsTitleId.setText(String.valueOf(news.getTitleid()));
+        newsTitleId.setText(String.valueOf(news.getTitleId()));
         TextView newsTitleText = (TextView)view.findViewById(R.id.news_title);
         newsTitleText.setText(news.getTitle());
+
+        Log.d("NewsAdapter","this");
         return view;
     }
 }
