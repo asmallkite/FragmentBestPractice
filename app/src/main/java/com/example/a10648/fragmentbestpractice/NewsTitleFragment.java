@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.a10648.fragmentbestpractice.model.News;
+import com.example.a10648.fragmentbestpractice.myadapter.NewsAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,7 +62,7 @@ public class NewsTitleFragment extends Fragment implements AdapterView.OnItemCli
             NewsContentFragment newsContentFragment = (NewsContentFragment)getFragmentManager().findFragmentById(R.id.news_content_fragment);
             newsContentFragment.refresh(news.getTitle(), news.getContent());
         }else {
-            actionStart(getActivity(), news.getTitle(), news.getContent());
+            actionStart(getActivity(),news.getTitleid(), news.getTitle(), news.getContent());
         }
     }
 
@@ -89,8 +92,9 @@ public class NewsTitleFragment extends Fragment implements AdapterView.OnItemCli
         newsList.add(news4);
         return newsList;
     }
-    public static void actionStart(Context context, String newsTitle, String newsContent){
+    public static void actionStart(Context context,int titelid, String newsTitle, String newsContent){
         Intent intent = new Intent(context, NewsContentActivity.class);
+        intent.putExtra("news_titleId", titelid);
         intent.putExtra("news_title", newsTitle);
         intent.putExtra("news_content", newsContent);
         context.startActivity(intent);

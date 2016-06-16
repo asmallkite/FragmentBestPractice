@@ -14,6 +14,7 @@ public class NewsContentActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.news_content);
+        String newsTitleId = getIntent().getStringExtra("news_titleId");
         String newsTitle = getIntent().getStringExtra("news_title");
         String newsContent = getIntent().getStringExtra("news_content");
         NewsContentFragment newsContentFragment = (NewsContentFragment)getFragmentManager().findFragmentById(R.id.news_content_fragment);

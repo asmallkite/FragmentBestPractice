@@ -1,4 +1,4 @@
-package com.example.a10648.fragmentbestpractice;
+package com.example.a10648.fragmentbestpractice.model;
 
 /**
  * Created by 10648 on 2016/6/14 0014.

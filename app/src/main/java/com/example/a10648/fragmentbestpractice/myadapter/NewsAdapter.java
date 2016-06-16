@@ -1,4 +1,4 @@
-package com.example.a10648.fragmentbestpractice;
+package com.example.a10648.fragmentbestpractice.myadapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,13 +7,15 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.a10648.fragmentbestpractice.R;
+import com.example.a10648.fragmentbestpractice.model.News;
+
 import java.util.List;
 
 /**
- * Created by 10648 on 2016/6/14 0014.
+ * Created by 10648 on 2016/6/16 0016.
  */
-
-public class NewsAdapter extends ArrayAdapter<News> {
+public class NewsAdapter extends ArrayAdapter<News>{
     private int resourceId;
 
     public NewsAdapter(Context context, int resource, List<News> objects) {
@@ -30,6 +32,8 @@ public class NewsAdapter extends ArrayAdapter<News> {
         }else {
             view = convertView;
         }
+        TextView newsTitleId = (TextView)view.findViewById(R.id.news_title_id);
+        newsTitleId.setText(String.valueOf(news.getTitleid()));
         TextView newsTitleText = (TextView)view.findViewById(R.id.news_title);
         newsTitleText.setText(news.getTitle());
         return view;
