@@ -69,27 +69,31 @@ public class NewsTitleFragment extends Fragment implements AdapterView.OnItemCli
 
     private List<News> getNews(){
         List<News> newsList = new ArrayList<News>();
-//        News news1 = new News();
-//        news1.setTitle("This is first news title");
-//        news1.setContent("This is the first news Content.");
-//        newsList.add(news1);
-//        News news2 = new News("this is the second title", "I could not know whether this method " +
-//                "will work");
-//        newsList.add(news2);
-//        News news3 = new News("kite","I am a small kite");
-//        newsList.add(news3);
         News news1 = new News();
-        news1.setTitleId(1);
-        news1.setTitle("title 1");
-        news1.setContent("one");
+        news1.setTitle("This is first news title");
+        news1.setContent("This is the first news Content.");
         newsList.add(news1);
-        News news2 = new News(2,"title 2", "I2this method " +
+        News news2 = new News("this is the second title", "I could not know whether this method " +
                 "will work");
         newsList.add(news2);
-        News news3 = new News(3,"kite","I am a small kite");
+        News news3 = new News("kite","I am a small kite");
         newsList.add(news3);
+//        News news1 = new News();
+//        news1.setTitleId(1);
+//        news1.setTitle("title 1");
+//        news1.setContent("one");
+//        newsList.add(news1);
+//        News news2 = new News(2,"title 2", "I2this method " +
+//                "will work");
+//        newsList.add(news2);
+        News news99 = new News(3,"kite","I am a small kite");
+        newsList.add(news99);
         News news4 =new  News(4, "title4","This is the content of 4");
         newsList.add(news4);
+        News news5 = new News(5, "title 5 ", "content 5");
+        newsList.add(news5);
+        News news6 = new News(100, "title 100", "content 100");
+        newsList.add(news6);
         return newsList;
     }
     public static void actionStart(Context context,int titelid, String newsTitle, String newsContent){
