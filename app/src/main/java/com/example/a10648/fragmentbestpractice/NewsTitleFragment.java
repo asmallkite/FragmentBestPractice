@@ -2,6 +2,8 @@ package com.example.a10648.fragmentbestpractice;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -57,7 +59,7 @@ public class NewsTitleFragment extends Fragment implements AdapterView.OnItemCli
             NewsContentFragment newsContentFragment = (NewsContentFragment)getFragmentManager().findFragmentById(R.id.news_content_fragment);
             newsContentFragment.refresh(news.getTitle(), news.getContent());
         }else {
-            NewsContentActivity.actionStart(getActivity(), news.getTitle(), news.getContent());
+            actionStart(getActivity(), news.getTitle(), news.getContent());
         }
     }
 
@@ -71,6 +73,15 @@ public class NewsTitleFragment extends Fragment implements AdapterView.OnItemCli
         News news2 = new News("this is the second title", "I could not know whether this method " +
                 "will work");
         newsList.add(news2);
+        News news3 = new News("kite","I am a small kite");
+        newsList.add(news3);
         return newsList;
     }
+    public static void actionStart(Context context, String newsTitle, String newsContent){
+        Intent intent = new Intent(context, NewsContentActivity.class);
+        intent.putExtra("news_title", newsTitle);
+        intent.putExtra("news_content", newsContent);
+        context.startActivity(intent);
+    }
+
 }

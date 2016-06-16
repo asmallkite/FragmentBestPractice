@@ -8,12 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 
 
 public class NewsContentActivity extends AppCompatActivity {
-    public static void actionStart(Context context, String newsTitle, String newsContent){
-        Intent intent = new Intent(context, NewsContentActivity.class);
-        intent.putExtra("news_title", newsTitle);
-        intent.putExtra("news_content", newsContent);
-        context.startActivity(intent);
-    }
 
 
     @Override
